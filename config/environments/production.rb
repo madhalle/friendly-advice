@@ -61,15 +61,14 @@ Rails.application.configure do
   # config.active_job.queue_adapter     = :resque
   # config.active_job.queue_name_prefix = "friendly_advice_#{Rails.env}"
   config.action_mailer.perform_caching = false
-  config.action_mailer.delivery_method = :smtp
 
+  config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-    host:                 'https://friendly-advice.herokuapp.com/',
     address:              'smtp.sendgrid.net',
     port:                 '587',
     domain:               'example.com',
-    user_name:            ENV["SENDGRID_USERNAME"],
-    password:             ENV["SENDGRID_PASSWORD"],
+    user_name:            'apikey',
+    password:             ENV["SENDGRID_API"],
     authentication:       'plain',
     enable_starttls_auto: true
   }
