@@ -16,6 +16,7 @@ gem 'turbolinks', '~> 5'
 gem 'bootstrap', '~> 4.4.1'
 gem 'faraday'
 gem 'bcrypt'
+gem 'figaro'
 
 group :development, :test do
   gem 'pry'
